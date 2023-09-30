@@ -1,0 +1,120 @@
+.footer {
+  padding-top: 40px;
+  background-color: $white;
+  position: relative;
+  margin-top: 20px;
+  box-shadow: $main-shadow;
+  .foot-content {
+    .footer-head {
+      margin-bottom: 30px;
+      font-size: 18px;
+      color: $black;
+      width: fit-content;
+      // font-family: fontDemi;
+
+      @media screen and (max-width: $screen-xs) {
+        font-size: 16px;
+      }
+    }
+
+    .foot-logo {
+      display: block;
+      max-width: 80px;
+      max-height: 90px;
+      margin: auto;
+
+      @media screen and (max-width: $screen-sm) {
+        max-width: 65px;
+        max-height: 85px;
+      }
+    }
+
+    .footer-info {
+      font-size: 15px;
+      color: $dark2;
+      // font-family: fontReg;
+      line-height: 1.6;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 85px;
+      .link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 22px;
+        width: fit-content;
+        color: $dark2;
+        transition: $main-transition;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: transparent;
+
+        &:hover {
+          #{$ltr} & {
+            transform: translateX(5px);
+          }
+          #{$rtl} & {
+            transform: translateX(-5px);
+          }
+          color: $main;
+        }
+
+        .ic {
+          max-width: 17px;
+          max-height: 17px;
+
+          // #{$ltr} & {
+          //     transform: rotate(180deg);
+          // }
+
+          &.app-link {
+            max-width: 220px;
+            height: 55px;
+            border-radius: 5px;
+          }
+        }
+
+        @media screen and (max-width: $screen-md) {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .foot-social {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .social-icon {
+        // @include center;
+        // background-color: $main;
+        
+        .social-ic {
+          @include circle(34px);
+          object-fit: cover;
+          // transition: $main-transition;
+          // max-width: 18px;
+          // max-height: 20px;
+        }
+
+        // &:hover {
+        //   .social-ic {
+        //     transform: rotate(360deg);
+        //   }
+        // }
+      }
+    }
+  }
+}
+
+.copy-right {
+  border-top: .5px solid rgba($color: $dark, $alpha: .25);
+  padding: 30px 0;
+  font-size: 16px;
+  color: $dark;
+  margin-top: 30px;
+}

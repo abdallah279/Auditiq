@@ -1,0 +1,128 @@
+@import "sass/variables", "sass/mixins", "sass/global", "sass/components",
+  "sass/navbar", "sass/footer";
+
+/***************** Start contact Page ***************/
+
+.contact-img {
+  display: block;
+  max-width: 400px;
+  max-height: 370px;
+
+  @media screen and (max-width: $screen-md) {
+    max-width: 360px;
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    max-width: calc(100% - 60px);
+  }
+}
+
+.contact-items {
+  @include between;
+  gap: 25px;
+  flex-wrap: wrap;
+
+  .contact-item {
+    .head {
+      font-size: 16px;
+      color: $main;
+      margin-bottom: 18px;
+
+      @media screen and (max-width: $screen-xs) {
+        font-size: 15px;
+      }
+    }
+
+    .text {
+      color: $dark;
+      font-size: 15px;
+      @media screen and (max-width: $screen-xs) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/***************** End contact Page ***************/
+
+/***************** Start Login Page ***************/
+.right-sec{
+  padding: 100px 100px 60px;
+  @include center;
+  min-height: 100vh;
+  // background-color: aliceblue;
+
+  @media screen and (max-width:$screen-md) {
+    padding: 40px;
+  }
+
+  @media screen and (max-width:$screen-sm) {
+    padding: 40px 20px;
+  }
+
+  @media screen and (max-width:$screen-xs) {
+    padding: 40px 10px;
+  }
+}
+
+.left-sec {
+  // position: relative;
+  background: linear-gradient($main, $sec);
+  @include center;
+  height: 100vh;
+  min-height: 700px;
+  padding: 80px;
+  position: fixed;
+  width: 50%;
+  @include dir-right(0);
+  top: 0;
+
+  @media screen and (max-width:$screen-lg) {
+    position: relative;
+    width: 100%;
+    // background: transparent;
+    z-index: -1;
+    padding: 80px 10px;
+  }
+
+  .home-link{
+    position: absolute;
+    top: 40px;
+    @include dir-left(50px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media screen and (max-width:$screen-sm) {
+      @include dir-left(20px)
+    }
+
+    .ic{
+      max-width: 12px;
+    }
+
+    .link{
+      font-size: 13px;
+      color: $white;
+      transition: $main-transition;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .login-img{
+    max-width: 380px;
+    max-height: 380px;
+
+    // @media screen and (max-width:$screen-lg) {
+    //   opacity: .1;
+    // }
+
+    @media screen and (max-width:$screen-xs) {
+      max-width: calc(100% - 30px);
+    }
+  }
+}
+/***************** End Login Page ***************/
