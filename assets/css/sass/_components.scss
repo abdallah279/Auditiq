@@ -584,6 +584,7 @@
       padding-bottom: 5px;
       color: $black;
       font-size: 13px;
+      font-family: fontMed;
 
       #{$rtl} & {
         border-right: 2px solid $border-color;
@@ -622,6 +623,10 @@
   }
 }
 
+.iti__country{
+  font-family: fontMed;
+}
+
 .iti__country-name {
   font-size: 14px;
 }
@@ -630,52 +635,24 @@
 .iti--separate-dial-code .iti__flag-container {
   #{$ltr} & {
     right: 0 !important;
-    left: unset;
+    left: unset !important;
   }
   #{$rtl} & {
-    left: 0;
+    left: 0 !important;
     right: unset !important;
   }
 }
-
-/********************* Titles *********************/
-
-.main-title {
-  position: relative;
-  display: block;
-  width: fit-content;
-  color: $red;
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 7px;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  line-height: 1.2;
-  z-index: 1;
-
-  &.lg {
-    line-height: 1;
-    font-size: 22px;
+.iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container{
+  #{$ltr} & {
+    right: 0 !important;
+    left: unset !important;
   }
-
-  .line {
-    position: absolute;
-    height: 6px;
-    background: #ffe7dd;
-    display: block;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
-  }
-
-  &.white {
-    color: $white;
-
-    .line {
-      background: $main;
-    }
+  #{$rtl} & {
+    left: 0 !important;
+    right: unset !important;
   }
 }
+/********************* Titles *********************/
 
 .big-title {
   font-size: 23px;
@@ -804,13 +781,13 @@
   }
 
   &.white {
-    background-color: $white;
-    color: $black;
-    border-color: $black;
+    background-color: transparent;
+    color: $white;
+    border-color: $white;
 
     &:hover {
-      background-color: $black;
-      color: #fff;
+      background-color: $white;
+      color: $main;
     }
   }
 
@@ -1053,6 +1030,10 @@
   color: $red !important;
 }
 
+.bg-gradient{
+  background: linear-gradient($main, $sec) !important;
+}
+
 .bg-white {
   background-color: $white;
 }
@@ -1213,27 +1194,44 @@
   }
 }
 
+.py-6{
+  padding: 60px 0;
+
+  @media screen and (max-width: $screen-xs) {
+    padding: 40px 0;
+  }
+}
+
 .sec-padding {
-  padding: 30px 0;
+  padding: 45px 0;
 }
 
 .sec-pt {
-  padding-top: 30px;
+  padding-top: 45px;
 }
 
 .sec-pb {
-  padding-bottom: 30px;
+  padding-bottom: 45px;
 }
 
 .rounded-3 {
   border-radius: 0.6rem !important;
 }
 
-.main-text {
+.main-title {
   font-size: 15px;
-  line-height: 1.9;
+  color: $sec;
+  margin-bottom: 17px;
+  width: fit-content;
+}
+
+.sec-title {
+  font-size: 18px;
   color: $black;
-  font-family: fontReg;
+  width: fit-content;
+  margin-bottom: 20px;
+  font-family: fontMed;
+  font-weight: 500;
 }
 
 .sec-text {
@@ -1430,9 +1428,6 @@
     font-size: 14px;
     padding: 13px 16px;
 
-    // @media screen and (max-width: $screen-xs) {
-    //   min-height: 44px;
-    // }
 
     &.photo-input {
       display: flex;
@@ -1442,11 +1437,16 @@
       cursor: pointer;
     }
 
+    &.phone-inp{ 
+      @include dir-padding-left(16px !important);
+      @include dir-padding-right(95px !important);
+    }
+
     &::placeholder {
       font-size: 13px;
       color: $dark;
       transition: $main-transition;
-      font-family: fontReg;
+      font-family: fontLight;
     }
 
     &:focus {
@@ -1756,19 +1756,19 @@
 }
 
 .select2-results__options {
-  max-height: 220px !important;
+  max-height: 230px !important;
 }
 
 .select2-results__options::-webkit-scrollbar {
   // display: none;
-  width: 4px;
+  width: 2px;
 }
 .select2-results__options::-webkit-scrollbar-track {
   background: #f0f0f0;
 }
 .select2-results__options::-webkit-scrollbar-thumb {
   border-radius: 25px;
-  background-color: #fcbbbb;
+  background-color: $main;
 }
 
 .dropdown-select-2 {

@@ -2,15 +2,27 @@
   padding-top: 40px;
   background-color: $white;
   position: relative;
-  margin-top: 20px;
+  // margin-top: 20px;
   box-shadow: $main-shadow;
   .foot-content {
+    &.info{
+      @include dir-padding-right(90px);
+      
+      @media screen and (max-width: $screen-lg2) {
+        @include dir-padding-right(50px);
+      }
+      
+      @media screen and (max-width: $screen-lg) {
+        @include dir-padding-right(0px);
+      }
+    }
     .footer-head {
       margin-bottom: 30px;
       font-size: 18px;
       color: $black;
       width: fit-content;
       // font-family: fontDemi;
+      font-family: fontMed;
 
       @media screen and (max-width: $screen-xs) {
         font-size: 16px;
@@ -90,22 +102,18 @@
       gap: 12px;
 
       .social-icon {
-        // @include center;
-        // background-color: $main;
-        
+
         .social-ic {
-          @include circle(34px);
+          @include circle(30px);
           object-fit: cover;
-          // transition: $main-transition;
-          // max-width: 18px;
-          // max-height: 20px;
+          transition: $main-transition;
         }
 
-        // &:hover {
-        //   .social-ic {
-        //     transform: rotate(360deg);
-        //   }
-        // }
+        &:hover {
+          .social-ic {
+            transform: rotate(360deg);
+          }
+        }
       }
     }
   }
@@ -117,4 +125,11 @@
   font-size: 16px;
   color: $dark;
   margin-top: 30px;
+  font-family: fontMed;
+
+  @media screen and (max-width: $screen-sm) {
+    font-size: 15px;
+    padding: 18px 0;
+    margin-top: 18px;
+  }
 }

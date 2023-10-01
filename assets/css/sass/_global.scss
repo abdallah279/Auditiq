@@ -13,12 +13,17 @@
 
 @font-face {
   font-family: fontMed;
-  src: url("../fonts/alfont_com_29LT-Kaff-Medium.ttf");
+  src: url("../fonts/29LTKaff-Medium.ttf");
 }
 
 @font-face {
   font-family: fontReg;
-  src: url("../fonts/alfont_com_AlFont_com_29LTKaff-Light-1.ttf");
+  src: url("../fonts/29LTKaff-Regular.otf");
+}
+
+@font-face {
+  font-family: fontLight;
+  src: url("../fonts/29LTKaff-Light.ttf");
 }
 
 html {
@@ -37,7 +42,6 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  font-family: fontMed;
   overflow-x: hidden;
   background-color: $white;
   position: relative;
@@ -45,10 +49,12 @@ body {
   #{$ltr} & {
     direction: ltr;
     text-align: left;
+    font-family: fontMed !important;
   }
   #{$rtl} & {
     direction: rtl;
     text-align: right;
+    font-family: fontReg;
   }
 }
 
