@@ -3372,9 +3372,9 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 }
 @media screen and (max-width: 576px) {
   .copy-right {
-    font-size: 15px;
+    font-size: 14px;
     padding: 18px 0;
-    margin-top: 18px;
+    margin-top: 20px;
   }
 }
 
