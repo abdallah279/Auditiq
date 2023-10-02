@@ -3402,7 +3402,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 }
 @media screen and (max-width: 768px) {
   .hero-sec .content {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 .hero-sec .content .hero-slider {

@@ -24,7 +24,7 @@
     gap: 35px;
 
     @media screen and (max-width: $screen-md) {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
 
     .hero-slider {
