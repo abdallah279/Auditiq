@@ -42,15 +42,22 @@
 
             <div class="col-lg-6">
                 <div class="right-sec">
+
+                    <div class="home-link">
+                        <img src="./assets/imgs/icons/home.png" alt="" class="ic">
+                        <a href="index.html" class="link">العودة للرئيسية</a>
+                    </div>
+
                     <div class="form-style">
                         <h4 class="form-title">إنشاء حساب</h4>
 
                         <div class="buttons links justify-content-center lg mb-5">
-                            <a href="create-account.html" class="link main-btn lg transparent">صاحب عمل</a>
-                            <a href="mystery-Create-Account.html" class="link main-btn lg transparent">متسوق خفي</a>
+                            <button type="button" class="link main-btn show-form lg transparent tabs-m" data-show="quality-safety">صاحب عمل</button>
+                            <button type="button" class="link main-btn lg transparent tabs-m" data-show="mystery-shopper">متسوق خفي</button>
                         </div>
 
-                        <form action="create-account-otp.html" class="login-form">
+                        <!-- Create Account -->
+                        <form action="create-account-otp.html" class="login-form show-form tabs-show quality-safety">
 
                             <div class="input-g">
                                 <label for="" class="main-label">
@@ -134,7 +141,106 @@
 
                             <div class="create-acc mt-4 fs-14">
                                 لديك حساب بالفعل ؟ 
-                                <a href="login.html" class="link text-decoration-underline c-main">
+                                <a href="login.html" class="link text-decoration-underline c-main" data-pass="quality-safety">
+                                    تسجيل دخول
+                                </a>
+                            </div>
+
+                            <div class="create-acc mt-4 fs-14">
+                                بتسجيلك ف انت توافق على 
+                                <a href="terms.html" class="link text-decoration-underline c-main">
+                                    الشروط والأحكام
+                                </a>
+                            </div>
+
+                        </form>
+
+                        <!-- Create Accout As Mystery Shopper -->
+                        <form action="mystery-account-otp.html" class="login-form tabs-show mystery-shopper">
+
+                            <div class="input-g">
+                                <label for="" class="main-label">
+                                    الاسم
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="text" placeholder="أدخل الاسم" class="input-me">
+                                </div>
+                            </div>
+
+                            <div class="input-g">
+                                <label for="" class="main-label">
+                                    رقم الجوال
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="number" id="telephone" placeholder="أدخل رقم الجوال" class="input-me phone-inp">
+                                </div>
+                            </div>
+
+                            <div class="input-g">
+                                <label for="" class="main-label">
+                                    البريد الالكترونى
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="email" placeholder="أدخل البريد الالكترونى" class="input-me">
+                                </div>
+                            </div>
+
+                            <div class="input-g">
+                                <label for="" class="main-label">
+                                    النوع
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <select name="" id="" class="select">
+                                        <option value="" selected disabled>اختر النوع</option>
+                                        <option value="">ذكر</option>
+                                        <option value="">أنثى</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-g">
+                                <label for="" class="main-label">
+                                    اللغة
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <select name="" id="" class="select">
+                                        <option value="" selected disabled>اختر اللغة</option>
+                                        <option value="">العربية</option>
+                                        <option value="">الانجليزية</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-g">
+                                <label for="" class="main-label">
+                                    كلمة المرور
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="password" placeholder="ادخل كلمة المرور" class="input-me">
+                                </div>
+                            </div>
+
+                            <div class="input-g">
+                                <label for="" class="main-label">
+                                    تأكيد كلمة المرور
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="password" placeholder="ادخل كلمة المرور" class="input-me">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="main-btn sec up mt-4">إنشاء حساب</button>
+
+                            <div class="create-acc mt-4 fs-14">
+                                لديك حساب بالفعل ؟ 
+                                <a href="login.html" class="link text-decoration-underline c-main" data-pass="mystery-shopper">
                                     تسجيل دخول
                                 </a>
                             </div>

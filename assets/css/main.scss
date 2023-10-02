@@ -172,83 +172,130 @@
     @media screen and (max-width: $screen-xs) {
       gap: 15px;
     }
+  }
+}
 
-    .services-item {
-      width: 270px;
-      display: block;
-      text-align: center;
-      transition: $main-transition;
-      border-radius: 15px;
-      padding: 30px 20px;
+.services-item {
+  width: 270px;
+  display: block;
+  text-align: center;
+  transition: $main-transition;
+  border-radius: 15px;
+  padding: 30px 20px;
 
-      @media screen and (max-width: $screen-md) {
-        width: 250px;
-        padding: 30px 15px;
-      }
+  @media screen and (max-width: $screen-md) {
+    width: 250px !important;
+    padding: 30px 15px;
+  }
 
-      @media screen and (max-width: $screen-sm) {
-        width: 200px;
-        padding: 30px 10px;
-      }
+  @media screen and (max-width: $screen-sm) {
+    width: 200px !important;
+    padding: 30px 10px;
+  }
 
-      @media screen and (max-width: $screen-xs) {
-        padding: 30px 20px;
-        width: 225px;
-        background-color: rgba($color: $white, $alpha: 0.1);
-      }
+  @media screen and (max-width: $screen-xs) {
+    padding: 30px 20px;
+    width: 225px !important;
+    background-color: rgba($color: $white, $alpha: 0.1);
+  }
 
-      .services-img {
-        width: 170px;
-        max-width: 100%;
-        max-height: 110px;
-        display: block;
-        margin: auto;
-        margin-bottom: 20px;
+  .services-img {
+    width: 170px;
+    max-width: 100%;
+    max-height: 110px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
 
-        @media screen and (max-width: $screen-md) {
-          width: 140px;
-        }
+    @media screen and (max-width: $screen-md) {
+      width: 140px;
+    }
 
-        @media screen and (max-width: $screen-sm) {
-          width: 100px;
-        }
+    @media screen and (max-width: $screen-sm) {
+      width: 100px;
+    }
 
-        @media screen and (max-width: $screen-xs) {
-          width: 85px;
-        }
-      }
+    @media screen and (max-width: $screen-xs) {
+      width: 85px;
+    }
+  }
 
-      .services-name {
-        font-size: 17px;
-        color: $white;
-        margin-bottom: 15px;
+  .services-name {
+    font-size: 17px;
+    color: $white;
+    margin-bottom: 15px;
 
-        @media screen and (max-width: $screen-md) {
-          font-size: 16px;
-        }
+    @media screen and (max-width: $screen-md) {
+      font-size: 16px;
+    }
 
-        @media screen and (max-width: $screen-xs) {
-          font-size: 15px;
-        }
-      }
+    @media screen and (max-width: $screen-xs) {
+      font-size: 15px;
+    }
+  }
 
-      .services-desc {
-        font-size: 14px;
-        color: $white;
-        line-height: 1.6;
+  .services-desc {
+    font-size: 14px;
+    color: $white;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
-        @media screen and (max-width: $screen-md) {
-          font-size: 13px;
-        }
+    @media screen and (max-width: $screen-md) {
+      font-size: 13px;
+    }
 
-        @media screen and (max-width: $screen-xs) {
-          font-size: 12px;
-        }
-      }
+    @media screen and (max-width: $screen-xs) {
+      font-size: 12px;
+    }
+  }
 
-      &:hover {
-        transform: translateY(-5px);
-        background-color: rgba($color: $white, $alpha: 0.1);
+  .more_btn {
+    font-size: 15px;
+    color: $black;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 25px;
+    transition: $main-transition;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    background-color: rgba($color: $white, $alpha: 0.1);
+  }
+}
+
+.services_txt_cards {
+  .services-item {
+    background-color: $white;
+    border: 1px solid rgba($color: $white2, $alpha: 0.6);
+    width: 255px;
+
+    @media screen and (max-width: $screen-lg) {
+      width: 250px !important;
+      padding: 30px 15px;
+    }
+
+    .services-name {
+      color: $black;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .services-desc {
+      color: $dark;
+    }
+
+    &:hover,
+    &.active {
+      transform: translateY(-14px);
+      background-color: rgba($color: $sec, $alpha: 0.05);
+      border-color: rgba($color: $sec, $alpha: 0.05);
+
+      .more_btn {
+        color: $sec;
       }
     }
   }
@@ -434,20 +481,6 @@
     gap: 30px;
     margin-bottom: 35px;
 
-    .text {
-      font-size: 15px;
-      line-height: 2.1;
-
-      @media screen and (max-width: $screen-md) {
-        text-align: center;
-      }
-
-      @media screen and (max-width: $screen-sm) {
-        font-size: 14px;
-        line-height: 1.7;
-      }
-    }
-
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
@@ -512,6 +545,80 @@
 }
 
 /***************** End home-contact-sec Section ***************/
+
+/***************** Start services-imgs Section ***************/
+.services_bg {
+  background: linear-gradient(
+    rgba($color: $sec, $alpha: 0),
+    rgba($color: $sec, $alpha: 0.04)
+  ) !important;
+}
+.services_img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 15px;
+
+  @media screen and (max-width: $screen-lg) {
+    height: 240px;
+    border-radius: 10px;
+  }
+}
+
+.services-imgs {
+  .owl-dots {
+    justify-content: center;
+    margin-top: 30px;
+
+    @media screen and (max-width: $screen-lg) {
+      margin-top: 25px;
+    }
+  }
+}
+/***************** End services-imgs Section ***************/
+
+/***************** Start services-det-item Section ***************/
+.services-det-item {
+  background-color: $white;
+  border-radius: 15px;
+  border: 1px solid $white2;
+  padding: 35px 30px;
+  position: relative;
+  text-align: center;
+
+  @media screen and (max-width: $screen-xs) {
+    padding: 30px 20px;
+  }
+
+  .services-det-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: $black;
+    margin-bottom: 18px;
+  }
+
+  .close-services {
+    position: absolute;
+    top: 25px;
+    @include dir-left(25px);
+    @include circle(26px);
+    font-size: 12px;
+    color: $white;
+    @include center;
+    cursor: pointer;
+    background-color: $red;
+
+    @media screen and (max-width: $screen-xs) {
+      top: 15px;
+      @include dir-left(15px);
+    }
+  }
+
+  .main-btn {
+    margin-top: 18px;
+  }
+}
+/***************** End services-det-item Section ***************/
 
 /***************** Start contact Page ***************/
 
@@ -578,18 +685,23 @@
   padding: 100px 100px 60px;
   @include center;
   min-height: 100vh;
-  // background-color: aliceblue;
+  position: relative;
+
+  @media screen and (max-width: $screen-lg) {
+    padding: 100px 40px 40px;
+    background: linear-gradient($main, $sec) !important;
+  }
 
   @media screen and (max-width: $screen-md) {
-    padding: 40px;
+    padding: 85px 10px 25px;
   }
 
-  @media screen and (max-width: $screen-sm) {
-    padding: 40px 20px;
-  }
+  .home-link {
+    display: none;
 
-  @media screen and (max-width: $screen-xs) {
-    padding: 40px 10px;
+    @media screen and (max-width: $screen-lg) {
+      display: block;
+    }
   }
 }
 
@@ -613,33 +725,6 @@
     padding: 80px 10px;
   }
 
-  .home-link {
-    position: absolute;
-    top: 40px;
-    @include dir-left(50px);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    @media screen and (max-width: $screen-sm) {
-      @include dir-left(20px);
-    }
-
-    .ic {
-      max-width: 12px;
-    }
-
-    .link {
-      font-size: 13px;
-      color: $white;
-      transition: $main-transition;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
   .login-img {
     max-width: 380px;
     max-height: 380px;
@@ -650,6 +735,37 @@
 
     @media screen and (max-width: $screen-xs) {
       max-width: calc(100% - 30px);
+    }
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    display: none;
+  }
+}
+
+.home-link {
+  position: absolute;
+  top: 40px;
+  @include dir-left(50px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @media screen and (max-width: $screen-sm) {
+    @include dir-left(20px);
+  }
+
+  .ic {
+    max-width: 12px;
+  }
+
+  .link {
+    font-size: 13px;
+    color: $white;
+    transition: $main-transition;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

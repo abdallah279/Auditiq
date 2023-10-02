@@ -1150,6 +1150,7 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
   padding: 30px;
   border-radius: 18px;
   width: 100%;
+  background-color: #fff;
 }
 @media screen and (max-width: 576px) {
   .form-style {
@@ -1388,6 +1389,22 @@ html[lang=ar] .remove-append {
 
 .main-border-b {
   border-bottom: 1px solid #3098DE;
+}
+
+.main-text {
+  font-size: 15px;
+  line-height: 2.1;
+}
+@media screen and (max-width: 768px) {
+  .main-text {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main-text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .main-padding {
@@ -1916,16 +1933,6 @@ html[lang=ar] .select-color ~ .select2 .select2-selection--multiple .select2-sel
   font-weight: 900;
   align-items: center;
   justify-content: center;
-}
-@media (max-width: 425px) {
-  .select ~ .select2 .select2-selection--single,
-  .select ~ .select2 .select2-selection--multiple,
-  .select-multi ~ .select2 .select2-selection--single,
-  .select-multi ~ .select2 .select2-selection--multiple,
-  .select-color ~ .select2 .select2-selection--single,
-  .select-color ~ .select2 .select2-selection--multiple {
-    padding: 10px 5px;
-  }
 }
 .select ~ .select2 .select2-selection--single .select2-selection__arrow b,
 .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow b,
@@ -3148,7 +3155,6 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
   color: #505050;
   font-size: 15px;
   position: relative;
-  padding: 12px 0;
   background-color: transparent;
   font-family: fontMed;
 }
@@ -3546,7 +3552,8 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
     gap: 15px;
   }
 }
-.services-h-sec .content .services-item {
+
+.services-item {
   width: 270px;
   display: block;
   text-align: center;
@@ -3555,25 +3562,25 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   padding: 30px 20px;
 }
 @media screen and (max-width: 768px) {
-  .services-h-sec .content .services-item {
-    width: 250px;
+  .services-item {
+    width: 250px !important;
     padding: 30px 15px;
   }
 }
 @media screen and (max-width: 576px) {
-  .services-h-sec .content .services-item {
-    width: 200px;
+  .services-item {
+    width: 200px !important;
     padding: 30px 10px;
   }
 }
 @media screen and (max-width: 425px) {
-  .services-h-sec .content .services-item {
+  .services-item {
     padding: 30px 20px;
-    width: 225px;
+    width: 225px !important;
     background-color: rgba(255, 255, 255, 0.1);
   }
 }
-.services-h-sec .content .services-item .services-img {
+.services-item .services-img {
   width: 170px;
   max-width: 100%;
   max-height: 110px;
@@ -3582,53 +3589,93 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 768px) {
-  .services-h-sec .content .services-item .services-img {
+  .services-item .services-img {
     width: 140px;
   }
 }
 @media screen and (max-width: 576px) {
-  .services-h-sec .content .services-item .services-img {
+  .services-item .services-img {
     width: 100px;
   }
 }
 @media screen and (max-width: 425px) {
-  .services-h-sec .content .services-item .services-img {
+  .services-item .services-img {
     width: 85px;
   }
 }
-.services-h-sec .content .services-item .services-name {
+.services-item .services-name {
   font-size: 17px;
   color: #fff;
   margin-bottom: 15px;
 }
 @media screen and (max-width: 768px) {
-  .services-h-sec .content .services-item .services-name {
+  .services-item .services-name {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 425px) {
-  .services-h-sec .content .services-item .services-name {
+  .services-item .services-name {
     font-size: 15px;
   }
 }
-.services-h-sec .content .services-item .services-desc {
+.services-item .services-desc {
   font-size: 14px;
   color: #fff;
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
-  .services-h-sec .content .services-item .services-desc {
+  .services-item .services-desc {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 425px) {
-  .services-h-sec .content .services-item .services-desc {
+  .services-item .services-desc {
     font-size: 12px;
   }
 }
-.services-h-sec .content .services-item:hover {
+.services-item .more_btn {
+  font-size: 15px;
+  color: #202020;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+.services-item:hover {
   transform: translateY(-5px);
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.services_txt_cards .services-item {
+  background-color: #fff;
+  border: 1px solid rgba(230, 230, 230, 0.6);
+  width: 255px;
+}
+@media screen and (max-width: 992px) {
+  .services_txt_cards .services-item {
+    width: 250px !important;
+    padding: 30px 15px;
+  }
+}
+.services_txt_cards .services-item .services-name {
+  color: #202020;
+  font-weight: 600;
+  font-size: 16px;
+}
+.services_txt_cards .services-item .services-desc {
+  color: #505050;
+}
+.services_txt_cards .services-item:hover, .services_txt_cards .services-item.active {
+  transform: translateY(-14px);
+  background-color: rgba(12, 105, 173, 0.05);
+  border-color: rgba(12, 105, 173, 0.05);
+}
+.services_txt_cards .services-item:hover .more_btn, .services_txt_cards .services-item.active .more_btn {
+  color: #0C69AD;
 }
 
 /***************** End services-h-sec Section ***************/
@@ -3813,21 +3860,6 @@ html[lang=ar] .about-card .text {
   gap: 30px;
   margin-bottom: 35px;
 }
-.about-items .about-item .text {
-  font-size: 15px;
-  line-height: 2.1;
-}
-@media screen and (max-width: 768px) {
-  .about-items .about-item .text {
-    text-align: center;
-  }
-}
-@media screen and (max-width: 576px) {
-  .about-items .about-item .text {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-}
 .about-items .about-item:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -3875,6 +3907,91 @@ html[lang=en] .home-contact-sec .contact .iti .iti__selected-flag .iti__selected
 }
 
 /***************** End home-contact-sec Section ***************/
+/***************** Start services-imgs Section ***************/
+.services_bg {
+  background: linear-gradient(rgba(12, 105, 173, 0), rgba(12, 105, 173, 0.04)) !important;
+}
+
+.services_img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+@media screen and (max-width: 992px) {
+  .services_img {
+    height: 240px;
+    border-radius: 10px;
+  }
+}
+
+.services-imgs .owl-dots {
+  justify-content: center;
+  margin-top: 30px;
+}
+@media screen and (max-width: 992px) {
+  .services-imgs .owl-dots {
+    margin-top: 25px;
+  }
+}
+
+/***************** End services-imgs Section ***************/
+/***************** Start services-det-item Section ***************/
+.services-det-item {
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid #E6E6E6;
+  padding: 35px 30px;
+  position: relative;
+  text-align: center;
+}
+@media screen and (max-width: 425px) {
+  .services-det-item {
+    padding: 30px 20px;
+  }
+}
+.services-det-item .services-det-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #202020;
+  margin-bottom: 18px;
+}
+.services-det-item .close-services {
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #D00000;
+}
+html[lang=en] .services-det-item .close-services {
+  left: 25px;
+}
+html[lang=ar] .services-det-item .close-services {
+  right: 25px;
+}
+@media screen and (max-width: 425px) {
+  .services-det-item .close-services {
+    top: 15px;
+  }
+  html[lang=en] .services-det-item .close-services {
+    left: 15px;
+  }
+  html[lang=ar] .services-det-item .close-services {
+    right: 15px;
+  }
+}
+.services-det-item .main-btn {
+  margin-top: 18px;
+}
+
+/***************** End services-det-item Section ***************/
 /***************** Start contact Page ***************/
 .contact-img {
   display: block;
@@ -3936,20 +4053,25 @@ html[lang=en] .home-contact-sec .contact .iti .iti__selected-flag .iti__selected
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .right-sec {
+    padding: 100px 40px 40px;
+    background: linear-gradient(#3098DE, #0C69AD) !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .right-sec {
-    padding: 40px;
+    padding: 85px 10px 25px;
   }
 }
-@media screen and (max-width: 576px) {
-  .right-sec {
-    padding: 40px 20px;
-  }
+.right-sec .home-link {
+  display: none;
 }
-@media screen and (max-width: 425px) {
-  .right-sec {
-    padding: 40px 10px;
+@media screen and (max-width: 992px) {
+  .right-sec .home-link {
+    display: block;
   }
 }
 
@@ -3979,38 +4101,6 @@ html[lang=ar] .left-sec {
     padding: 80px 10px;
   }
 }
-.left-sec .home-link {
-  position: absolute;
-  top: 40px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-html[lang=en] .left-sec .home-link {
-  left: 50px;
-}
-html[lang=ar] .left-sec .home-link {
-  right: 50px;
-}
-@media screen and (max-width: 576px) {
-  html[lang=en] .left-sec .home-link {
-    left: 20px;
-  }
-  html[lang=ar] .left-sec .home-link {
-    right: 20px;
-  }
-}
-.left-sec .home-link .ic {
-  max-width: 12px;
-}
-.left-sec .home-link .link {
-  font-size: 13px;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-.left-sec .home-link .link:hover {
-  text-decoration: underline;
-}
 .left-sec .login-img {
   max-width: 380px;
   max-height: 380px;
@@ -4019,6 +4109,44 @@ html[lang=ar] .left-sec .home-link {
   .left-sec .login-img {
     max-width: calc(100% - 30px);
   }
+}
+@media screen and (max-width: 992px) {
+  .left-sec {
+    display: none;
+  }
+}
+
+.home-link {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+html[lang=en] .home-link {
+  left: 50px;
+}
+html[lang=ar] .home-link {
+  right: 50px;
+}
+@media screen and (max-width: 576px) {
+  html[lang=en] .home-link {
+    left: 20px;
+  }
+  html[lang=ar] .home-link {
+    right: 20px;
+  }
+}
+.home-link .ic {
+  max-width: 12px;
+}
+.home-link .link {
+  font-size: 13px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.home-link .link:hover {
+  text-decoration: underline;
 }
 
 /***************** End Login Page ***************/

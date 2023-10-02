@@ -42,15 +42,22 @@
 
             <div class="col-lg-6">
                 <div class="right-sec">
+
+                    <div class="home-link">
+                        <img src="./assets/imgs/icons/home.png" alt="" class="ic">
+                        <a href="index.html" class="link">العودة للرئيسية</a>
+                    </div>
+
                     <div class="form-style">
                         <h4 class="form-title">تسجيل دخول</h4>
 
                         <div class="buttons links justify-content-center lg mb-5">
-                            <a href="login.html" class="link main-btn lg transparent">صاحب عمل</a>
-                            <a href="mystery-Login.html" class="link main-btn lg transparent">متسوق خفي</a>
+                            <button type="button" class="link main-btn show-form lg transparent tabs-m" data-show="quality-safety">صاحب عمل</button>
+                            <button type="button" class="link main-btn lg transparent tabs-m" data-show="mystery-shopper">متسوق خفي</button>
                         </div>
 
-                        <form action="" class="login-form">
+                        <!-- Login -->
+                        <form action="" class="login-form show-form tabs-show quality-safety">
 
                             <div class="input-g">
                                 <label for="" class="main-label">
@@ -80,7 +87,45 @@
 
                             <div class="create-acc mt-4 fs-14">
                                 ليس لديك حساب ؟
-                                <a href="create-account.html" class="link text-decoration-underline c-main">
+                                <a href="create-account.html" class="link text-decoration-underline c-main" data-pass="quality-safety">
+                                    إنشاء حساب
+                                </a>
+                            </div>
+
+                        </form>
+
+                        <!-- Login As Mystery Shopper -->
+                        <form action="" class="login-form tabs-show mystery-shopper">
+
+                            <div class="input-g">
+                                <label for="" class="main-label">
+                                    رقم الجوال
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="number" id="telephone" placeholder="أدخل رقم الجوال" class="input-me phone-inp">
+                                </div>
+                            </div>
+
+                            <div class="input-g">
+                                <label for="" class="main-label">
+                                    كلمة المرور
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="password" placeholder="ادخل كلمة المرور" class="input-me">
+                                </div>
+                            </div>
+
+                            <div class="form-pass">
+                                <a href="forget-password.html" class="link">هل نسيت كلمة المرور ؟</a>
+                            </div>
+
+                            <button type="submit" class="main-btn sec up mt-4">دخول</button>
+
+                            <div class="create-acc mt-4 fs-14">
+                                ليس لديك حساب ؟
+                                <a href="create-account.html" class="link text-decoration-underline c-main" data-pass="mystery-shopper">
                                     إنشاء حساب
                                 </a>
                             </div>
