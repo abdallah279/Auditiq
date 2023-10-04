@@ -4,22 +4,29 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 888;
+  z-index: 1080;
   background-color: $white;
   transition: $main-transition;
   box-shadow: $main-shadow;
 
-  @media screen and (max-width: $screen-lg) {
-    position: unset;
-    padding: 12px 0;
-  }
+  &.scroll{
+    .navbar-content {
+      .logo {
 
+        .logo-img {
+          max-width: 90px;
+          max-height: 50px;
+        }
+      }
+    }
+  }
   .navbar-content {
     @include between;
     gap: 15px;
 
     .logo {
       width: 228px;
+      transition: $main-transition;
 
       @media screen and (max-width: $screen-lg) {
         width: auto;

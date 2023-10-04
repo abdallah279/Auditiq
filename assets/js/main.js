@@ -3,6 +3,14 @@ $(window).on("load", function () {
   $(".loader-container").delay(300).fadeOut(1000);
 });
 
+// Header Fixed
+let header = document.querySelector('.page-navbar');
+header.classList.toggle('scroll', window.scrollY > 50);
+
+window.addEventListener('scroll', function(){
+  header.classList.toggle('scroll', window.scrollY > 50);
+});
+
 // Active Link
 $(".links .link").each(function () {
   if (window.location.href.includes($(this).attr("href"))) {
@@ -17,8 +25,8 @@ $(".nav-search-ic").on("click", function () {
 
 // SideBar
 $(".side-open").on("click", function () {
-  $(".links").addClass("active");
-  $(".overlay-m").fadeIn(600);
+  $(".links").toggleClass("active");
+  $(".overlay-m").fadeToggle(600);
 });
 
 $(".side-user-open").on("click", function () {

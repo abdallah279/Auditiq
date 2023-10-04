@@ -3056,16 +3056,14 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 888;
+  z-index: 1080;
   background-color: #fff;
   transition: all 0.3s ease;
   box-shadow: 0 0 10px 0 rgba(32, 32, 32, 0.1);
 }
-@media screen and (max-width: 992px) {
-  .page-navbar {
-    position: unset;
-    padding: 12px 0;
-  }
+.page-navbar.scroll .navbar-content .logo .logo-img {
+  max-width: 90px;
+  max-height: 50px;
 }
 .page-navbar .navbar-content {
   display: flex;
@@ -3075,6 +3073,7 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
 }
 .page-navbar .navbar-content .logo {
   width: 228px;
+  transition: all 0.3s ease;
 }
 @media screen and (max-width: 992px) {
   .page-navbar .navbar-content .logo {
