@@ -5,11 +5,14 @@ $(window).on("load", function () {
 
 // Header Fixed
 let header = document.querySelector('.page-navbar');
-header.classList.toggle('scroll', window.scrollY > 50);
 
-window.addEventListener('scroll', function(){
+if(header){
   header.classList.toggle('scroll', window.scrollY > 50);
-});
+  
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scroll', window.scrollY > 50);
+  });
+}
 
 // Active Link
 $(".links .link").each(function () {
